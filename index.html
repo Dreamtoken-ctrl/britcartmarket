@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BritCart Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo">BritCart</div>
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search for products, brands and categories..." />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <nav class="top-nav">
+      <a href="#seller">Sell</a>
+      <a href="#admin">Admin</a>
+      <a href="#cart">Cart <span id="cartCount">0</span></a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <section class="promo-bar">
+    Fast UK delivery • Secure payments • Trusted local sellers
+  </section>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Buy and sell across the United Kingdom</h1>
+        <p>A modern marketplace for electronics, home, baby, car, fashion and more.</p>
+        <a href="#products" class="hero-btn">Start shopping</a>
+      </div>
+    </section>
+
+    <section class="layout">
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <button onclick="filterCategory('All')">All products</button>
+        <button onclick="filterCategory('Electronics')">Electronics</button>
+        <button onclick="filterCategory('Home')">Home</button>
+        <button onclick="filterCategory('Baby')">Baby</button>
+        <button onclick="filterCategory('Car')">Car</button>
+        <button onclick="filterCategory('Fashion')">Fashion</button>
+      </aside>
+
+      <section class="products-section" id="products">
+        <div class="section-title">
+          <h2>Popular offers</h2>
+          <select id="sortSelect" onchange="sortProducts()">
+            <option value="default">Sort by</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </div>
+        <div class="product-grid" id="productList"></div>
+      </section>
+    </section>
+
+    <section class="cart-panel" id="cart">
+      <h2>Your cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total">Total: £<span id="totalPrice">0.00</span></div>
+      <button class="checkout-btn" onclick="checkout()">Proceed to checkout</button>
+    </section>
+
+    <section class="seller-panel" id="seller">
+      <h2>Seller dashboard</h2>
+      <p>Add a new product to the marketplace.</p>
+      <div class="seller-form">
+        <input id="newName" type="text" placeholder="Product name" />
+        <input id="newPrice" type="number" placeholder="Price in GBP" />
+        <input id="newCategory" type="text" placeholder="Category: Electronics, Home, Baby..." />
+        <input id="newImage" type="text" placeholder="Image URL" />
+        <textarea id="newDescription" placeholder="Product description"></textarea>
+        <button onclick="addSellerProduct()">Add product</button>
+      </div>
+    </section>
+
+
+    <section class="admin-panel" id="admin">
+      <h2>Admin dashboard</h2>
+      <p>Manage marketplace activity, products and sellers.</p>
+
+      <div class="admin-stats">
+        <div class="admin-card">
+          <h3>Total users</h3>
+          <p>1,245</p>
+        </div>
+        <div class="admin-card">
+          <h3>Total products</h3>
+          <p id="adminProductCount">6</p>
+        </div>
+        <div class="admin-card">
+          <h3>Total orders</h3>
+          <p>328</p>
+        </div>
+        <div class="admin-card">
+          <h3>Commission revenue</h3>
+          <p>£2,480</p>
+        </div>
+      </div>
+
+      <div class="admin-actions">
+        <h3>Pending product listing</h3>
+        <p id="pendingListing">Samsung Galaxy Tablet — Seller: UK Tech Store</p>
+        <button onclick="approveListing()">Approve</button>
+        <button class="remove-btn" onclick="removeListing()">Remove</button>
+      </div>
+    </section>
+
+    <section class="login-panel" id="login">
+      <h2>Login</h2>
+      <p>Access your BritCart buyer or seller account.</p>
+      <form class="login-form" onsubmit="loginUser(event)">
+        <input id="loginEmail" type="email" placeholder="Email address" required />
+        <input id="loginPassword" type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section class="info-section">
+      <div>
+        <h3>For buyers</h3>
+        <p>Secure checkout, product reviews and UK delivery options.</p>
+      </div>
+      <div>
+        <h3>For sellers</h3>
+        <p>Create listings, manage products and grow your UK customer base.</p>
+      </div>
+      <div>
+        <h3>Marketplace fee</h3>
+        <p>Example model: 8% commission per successful sale.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BritCart Marketplace. Independent UK marketplace concept.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
