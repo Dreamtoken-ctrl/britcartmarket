@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The planning, design decisions and development process behind BritCart Marketplace." />
+  <title>Blog | BritCart Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-header blog-header">
+    <a class="logo" href="index.html">BritCart</a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="index.html#products">Shop</a>
+      <a href="index.html#seller">Sell</a>
+      <a href="index.html#cart">Cart</a>
+      <a href="index.html#login">Login</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+    </nav>
+  </header>
+
+  <main class="blog-page">
+    <article class="blog-article">
+      <p class="journal-eyebrow">BritCart Marketplace · Development blog</p>
+      <h1>Building BritCart: from marketplace idea to website prototype</h1>
+      <p class="blog-lead">BritCart is a UK marketplace prototype. This blog records the planning, design, coding challenges and next steps behind its development.</p>
+
+      <section>
+        <h2>Initial planning and conceptualisation</h2>
+        <p>I developed BritCart as a UK-focused online marketplace where buyers can browse everyday products and independent sellers can create listings. I wanted the first screen to explain the service quickly, so I planned a clear value proposition, visible product categories and a direct route to shopping. The brief required an e-commerce website with a blog and marketing materials, so I treated the site as both a practical store prototype and a communication channel. I registered britcartmarket.uk and set up account creation for the live project. My early plan kept the first version manageable: a home page, product discovery, cart, seller entry and a short guide for users.</p>
+      </section>
+
+      <section>
+        <h2>Design decisions and rationale</h2>
+        <p>I used a warm orange accent with charcoal text and pale backgrounds to make the marketplace feel energetic while keeping product content central. The header combines the BritCart name, search field and links for selling, the cart and account access. A short reassurance line sits below it, followed by a large headline and a prominent shopping action. Categories sit beside product cards on wide screens, helping shoppers narrow their choices. This follows a visual hierarchy: the service purpose comes first, then discovery, then product details and actions. I also planned a simpler stacked layout for phones because many shoppers use small screens.</p>
+      </section>
+
+      <section>
+        <h2>Technical challenges and solutions</h2>
+        <p>The main challenge was coordinating separate HTML, CSS and JavaScript files so that visible controls matched the behaviour behind them. I used IDs on search, cart and form elements, then connected them to JavaScript functions. Search checks product names, categories and descriptions; category buttons filter the products; sorting reorders the current results; and cart actions update quantities and totals. Seller entry adds a product to the page during the session. These features make the prototype interactive, but they do not create a production marketplace: the supplied checkout and login messages are demonstrations, and the code does not connect to a payment provider or database.</p>
+      </section>
+
+      <section>
+        <h2>Tools and technologies used</h2>
+        <p>I built the interface with HTML for page structure, CSS for visual styling and responsive layout, and JavaScript for product filtering, sorting, cart updates and form interactions. The product list is held in a JavaScript array, which made it easy to test different categories and prices without building a database. I used a registered domain so the project could be presented as a real website address. The saved code snapshot still shows a demonstration login, so my final evidence should show the current deployed version and explain which account functions rely on a backend.</p>
+      </section>
+
+      <section>
+        <h2>Overall development process</h2>
+        <p>I moved from a marketplace idea to a coded prototype by choosing key user journeys first: find a product, narrow results, add an item to the cart and explore seller options. I then styled the page and added JavaScript interactions. Testing helped me distinguish a visible control from a complete service. I learned to check behaviour as well as appearance, and to state limitations clearly. Next, I will test the blog on the live site, check mobile and keyboard navigation, improve form feedback, and replace demonstration account and checkout functions with secure services before taking real orders.</p>
+      </section>
+
+      <p class="blog-back"><a class="hero-btn" href="index.html#products">Continue shopping</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 BritCart Marketplace. Independent UK marketplace concept.</p>
+    <div class="social-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#seller">Sell on BritCart</a>
+    </div>
+  </footer>
+</body>
+</html>
